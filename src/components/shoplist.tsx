@@ -10,11 +10,11 @@ export const ShopList: React.FC<ShopListProps> = ({ name, quantity }) => {
 
       return (
             <div style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
-                  <p style={{ width: '40%' }}>{name}</p>
-                  <p style={{ width: '50px' }}>{productCount}</p>
+                  <p style={{ width: '50%', border: '1px solid gray' }}>{name}</p>
+                  <p style={{ width: '90%', border: '1px solid gray' }}>{productCount}</p>
                   <p>ks</p>
-                  <button style={{ backgroundColor: 'green', fontSize: '12px', height: '40px' }}>Button 1</button>
-                  <button style={{ backgroundColor: 'red', fontSize: '12px', height: '40px' }}>Button 2</button>
+                  <button style={{ backgroundColor: 'green', fontSize: '12px', height: '40px', width: '170px' }}>done</button>
+                  <button style={{ backgroundColor: 'red', fontSize: '12px', height: '40px', width: '170px' }}>remove</button>
             </div>
       );
-      } // Add this closing curly brace
+} // Add this closing curly brace

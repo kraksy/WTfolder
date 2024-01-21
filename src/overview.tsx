@@ -1,44 +1,34 @@
 import React from 'react';
+
+import Card from './components/card';
 import Flags from './components/flags'
 import Switch from './components/switch'
-import { Card, Button } from 'antd';
 
-const OverviewPage: React.FC = () => {
+const Overview = () => {
       return (
             <div>
-                  <div className='header'>
+                  <div className='header' style={{ backgroundColor: 'transparent' }}>
                         <Flags />
-                        <Switch />
-                  </div>
-                  <header style={{ backgroundColor: 'transparent' }}>
-                        <h1>Title</h1>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                              <Button>Button 1</Button>
-                              <Button>Button 2</Button>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                              <Switch />
                         </div>
-                  </header>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        <Card title="Card 1" style={{ width: 300, margin: '10px' }}>
-                              <p>Card content</p>
-                              <Button>Button</Button>
-                        </Card>
-                        <Card title="Card 2" style={{ width: 300, margin: '10px' }}>
-                              <p>Card content</p>
-                              <Button>Button</Button>
-                        </Card>
-                        <Card title="Card 3" style={{ width: 300, margin: '10px' }}>
-                              <p>Card content</p>
-                              <Button>Button</Button>
-                        </Card>
-                        <Card title="Card 4" style={{ width: 300, margin: '10px' }}>
-                              <p>Card content</p>
-                              <Button>Button</Button>
-                        </Card>
                   </div>
-                  <Flags/>
-                  <Switch/>
+
+                  <h1>Overview</h1>
+
+                  <div>
+                        <button className='blueButton' style={{ marginBottom: '10px' }}> open all </button>
+                        <button className='greenButton' style={{ marginBottom: '10px' }}> add new </button>
+                  </div>
+
+                  <div className='cards'>
+                        <Card />
+                        <Card />
+                        <Card />
+                        <Card />
+                  </div>
             </div>
       );
 };
 
-export default OverviewPage;
+export default Overview;

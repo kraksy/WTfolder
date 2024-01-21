@@ -1,10 +1,15 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%; /* Increase the max-width value */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   position: relative; /* Add this line */
 }
+
+.blueButton {
+  background-color: blue;
+}
+
 .header {
   position: fixed;
   top: 0;
