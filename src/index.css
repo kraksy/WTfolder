@@ -4,14 +4,24 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #000000; /* Updated text color */
-  background-color: #ffffff; /* Updated background color */
+  color: #ffffff; /* Updated text color to white */
+  background-color: #000000; /* Updated background color */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start; /* Align to the left corner */
+  min-width: 500px;
+  min-height: 100vh;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-repeat: repeat;
+}
+
 
 a {
   font-weight: 500;
