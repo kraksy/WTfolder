@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "archive/header.tsx", "archive/planetList.tsx", "archive/planet.tsx", "archive/planetdetails.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

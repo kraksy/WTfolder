@@ -1,15 +1,20 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
-  return (
-    <header className="blacktext" style={{ backgroundColor: 'transparent', border: '1px solid white', padding: '20px' }}>
-      <h1 className="blacktext" style={{ textAlign: 'center', color: 'white' }}>Simple Planet WebSite</h1>
-      <nav className="blacktext" style={{ display: 'flex', justifyContent: 'center' }}>
-        <a className="blacktext" href="/" style={{ marginRight: '20px' }}>Home</a>
-        <a className="blacktext" href="/planets" style={{ marginLeft: '20px' }}>Planets</a>
-      </nav>
-    </header>
-  );
+      return (
+            <header className="header">
+                  <h1 className="header-title">Welcome to My Website</h1>
+                  <nav className="header-nav">
+                        <ul className="header-nav-list">
+                              <li className="header-nav-item">Home</li>
+                              <li className="header-nav-item">About</li>
+                              <li className="header-nav-item">Services</li>
+                              <li className="header-nav-item">Contact</li>
+                        </ul>
+                  </nav>
+            </header>
+      );
 };
 
 export default Header;
