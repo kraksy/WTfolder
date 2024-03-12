@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Card from './components/card';
+import Card from './components/Card';
 import Flags from './components/flags'
 import Switch from './components/switch'
 
