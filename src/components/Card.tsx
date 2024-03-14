@@ -1,11 +1,16 @@
 import React from 'react';
-import './Card.css';
 
-const Card = () => {
+interface CardProps {
+      title: string;
+      content: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, content }) => {
       return (
-            <div className="body">
-                  <a> put elements here </a>
-            <div>
+            <div className="card">
+                  <h2>{title}</h2>
+                  <p>{content}</p>
+            </div>
       );
 };
 

@@ -1,17 +1,22 @@
 
 import './App.css'
 import Header from './components/header'
-import Value from './components/value'
-import Graph from './components/graph'
-import Percentage from './components/percentage'
+import LoginSpace from './components/loginSpace'
+import Card from './components/Card'
+import Icon from './components/icon'
+import WeatherText from './components/weatherText'
 
 function App() {
   return (
     <>
       <Header />
-      <Value />
-      <Percentage value={<Value />} />
-      <Graph value={<Value />} />
+      <LoginSpace />
+
+      <Card>
+        <Icon src="https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg" />
+        <WeatherText />
+      </Card>
+
     </>
   )
 }
