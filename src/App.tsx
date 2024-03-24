@@ -6,14 +6,19 @@ import Login from "./components/login";
 
 import type { Location } from "./types/location";
 
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from './config/firebase';
+
 export default function App() {
   const [location, setLocation] = useState<Location | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [username, setUsername] = useState('');
+  const [Email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleLogin = (loggedInUsername: SetStateAction<string>) => {
-    setIsLoggedIn(true);
-    setUsername(loggedInUsername);
+  const handleLogin = async () => {
+        await createUserWithEmailAndPassword(auth, Email, password);
+        console.log('Username:', Email);
+        console.log('Password:', password);
   };
 
   const handleLogout = () => {
