@@ -5,52 +5,42 @@ import './App.css';
 import TeamCard from './components/TeamCard';
 
 function App() {
-  const [teams, setTeams] = useState([]);
-  const [search, setSearch] = useState('boston');
-
   useEffect(() => {
-    const fetchTeams = async () => {
+    async function GetTeams(searchParams)
+    {
       const options = {
         method: 'GET',
         url: 'https://api-basketball.p.rapidapi.com/teams',
-        params: { search },
+        params: { search: searchParam },
         headers: {
-          'X-RapidAPI-Key': 'YOUR_RAPIDAPI_KEY',
-          'X-RapidAPI-Host': 'api-basketball.p.rapidapi.com',
-        },
-      };
+        'X-RapidAPI-Key': '12f596280emshb01be7f03c24984p132837jsnf15342aa333e',
+        'X-RapidAPI-Host': 'api-basketball.p.rapidapi.com'
+        }
+      }
+    }
 
-      try {
+    try {
         const response = await axios.request(options);
-        setTeams(response.data.response);
+        return response.data;
       } catch (error) {
         console.error(error);
       }
     };
+  }
 
-    fetchTeams();
-  }, [search]);
-
-  const handleSearchChange = (event) => {
-    setSearch(event.target.value);
-  };
+  function HandleSearch(Team)
+  {
+    GetTeams(value);
+  }
 
   return (
     <>
       <div>
         <div className="header">
-          <input type="text" value={search} onChange={handleSearchChange} placeholder="Search for a team" />
+          <input type="text" value={search} onChange={HandleSearch} placeholder="Search for a team" />
         </div>
         <div className="team-container">
-          {teams.map((team) => (
-            <TeamCard
-              key={team.id}
-              homeTeamLogo={team.logo}
-              homeTeamScore={0} // Assuming you have score data or set it accordingly
-              awayTeamLogo={''} // Assuming you have away team data or set it accordingly
-              awayTeamScore={0} // Assuming you have score data or set it accordingly
-            />
-          ))}
+          
         </div>
       </div>
     </>
